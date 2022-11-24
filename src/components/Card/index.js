@@ -40,7 +40,7 @@ function Card({
         <img
           className="cu-p"
           src={isAdded ? "img/btn-added.svg" : "img/btn-add.svg"}
-          alt="Plus"
+          alt="Plus"  
           onClick={onClickPlus}
         />
       </div>
