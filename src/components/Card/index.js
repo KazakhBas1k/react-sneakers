@@ -26,7 +26,7 @@ function Card({
     <div className={style.card}>
       <img
         className="cu-p pos-a"
-        src={isFav ? "img/heart-after.svg" : "img/heart-before.svg"}
+        src={isFav ? "/img/heart-after.svg" : "/img/heart-before.svg"}
         alt="Heart"
         onClick={onClickFav}
       />
@@ -39,7 +39,7 @@ function Card({
         </div>
         <img
           className="cu-p"
-          src={isAdded ? "img/btn-added.svg" : "img/btn-add.svg"}
+          src={isAdded ? "/img/btn-added.svg" : "/img/btn-add.svg"}
           alt="Plus"  
           onClick={onClickPlus}
         />

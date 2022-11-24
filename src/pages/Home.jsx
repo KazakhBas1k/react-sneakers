@@ -15,7 +15,7 @@ function Home({
           {searchValue ? `Поиск по запросу: "${searchValue}"` : "Все кроссовки"}
         </h1>
         <div className="searchBlock d-flex">
-          <img src="img/search.svg" alt="Search" />
+          <img src="/img/search.svg" alt="Search" />
           <input
             value={searchValue}
             onChange={onChangeSearchInput}

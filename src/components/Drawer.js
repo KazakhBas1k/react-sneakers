@@ -5,7 +5,7 @@ function Drawer({ onCloseCart, onRemove, items = [] }) {
         <h2 className="d-flex justify-between align-center mb-30">
           Корзина
           <button className="button removeBtn" onClick={onCloseCart}>
-            <img src="img/btn-remove.svg" alt="Remove Button" />
+            <img src="/img/btn-remove.svg" alt="Remove Button" />
           </button>
         </h2>
 
@@ -28,7 +28,7 @@ function Drawer({ onCloseCart, onRemove, items = [] }) {
                     onClick={() => onRemove(obj.id)}
                     className="button removeBtn"
                   >
-                    <img src="img/btn-remove.svg" alt="Remove Button" />
+                    <img src="/img/btn-remove.svg" alt="Remove Button" />
                   </button>
                 </div>
               ))}
@@ -48,7 +48,7 @@ function Drawer({ onCloseCart, onRemove, items = [] }) {
               </ul>
               <button className="greenButton">
                 Оформить заказ
-                <img src="img/arrow.svg" alt="Arrow" />
+                <img src="/img/arrow.svg" alt="Arrow" />
               </button>
             </div>
           </div>
@@ -58,14 +58,14 @@ function Drawer({ onCloseCart, onRemove, items = [] }) {
               className="mb-20"
               width={120}
               height={120}
-              src="img/empty-cart.jpg"
+              src="/img/empty-cart.jpg"
             />
             <h2>Корзина пустая</h2>
             <p className="opacity-6">
               Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.
             </p>
             <button onClick={onCloseCart} className="greenButton">
-              <img src="img/arrow.svg" />
+              <img src="/img/arrow.svg" />
               Вернуться назад
             </button>
           </div>
