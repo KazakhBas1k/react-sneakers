@@ -22,9 +22,9 @@ function App() {
       try {
         const [cartResponse, favoritesResponse, itemsResponse] =
           await Promise.all([
-            axios.get("https://637e3c87cfdbfd9a63abb761.mockapi.io/cart"),
-            axios.get("https://637e3c87cfdbfd9a63abb761.mockapi.io/favorites"),
-            axios.get("https://637e3c87cfdbfd9a63abb761.mockapi.io/items"),
+            axios.get("https://63ee1ed6388920150dd97788.mockapi.io/cart"),
+            axios.get("https://63ee1ed6388920150dd97788.mockapi.io/favorites"),
+            axios.get("https://my.api.mockaroo.com/items.json?key=4504bda0"),
           ]);
 
         setIsLoading(false);
@@ -46,12 +46,12 @@ function App() {
       if (findItem) {
         setCartItems((prev) => prev.filter((item) => Number(item.parentId) !== Number(obj.id)));
         await axios.delete(
-          `https://637e3c87cfdbfd9a63abb761.mockapi.io/cart/${findItem.id}`
+          `https://63ee1ed6388920150dd97788.mockapi.io/cart/${findItem.id}`
         );
       } else {
         setCartItems((prev) => [...prev, obj]);
         const { data } = await axios.post(
-          "https://637e3c87cfdbfd9a63abb761.mockapi.io/cart",
+          "https://63ee1ed6388920150dd97788.mockapi.io/cart",
           obj
         );
         setCartItems((prev) =>
@@ -74,7 +74,7 @@ function App() {
 
   const onRemoveItem = (id) => {
     try {
-      axios.delete(`https://637e3c87cfdbfd9a63abb761.mockapi.io/cart/${id}`);
+      axios.delete(`https://63ee1ed6388920150dd97788.mockapi.io/cart/${id}`);
       setCartItems((prev) => prev.filter((item) => Number(item.id) !== Number(id)));
     } catch (error) {
       alert('Ошибка при удалении из корзины');
@@ -86,12 +86,12 @@ function App() {
     try {
       if (favorites.find((favObj) => Number(favObj.id) === Number(obj.id))) {
         axios.delete(
-          `https://637e3c87cfdbfd9a63abb761.mockapi.io/favorites/${obj.id}`
+          `https://63ee1ed6388920150dd97788.mockapi.io/favorites/${obj.id}`
         );
         setFavorites((prev) => prev.filter((item) => Number(item.id) !== Number(obj.id)));
       } else {
         const { data } = await axios.post(
-          "https://637e3c87cfdbfd9a63abb761.mockapi.io/favorites",
+          "https://63ee1ed6388920150dd97788.mockapi.io/favorites",
           obj
         );
         setFavorites((prev) => [...prev, data]);
